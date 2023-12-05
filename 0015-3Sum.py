@@ -13,7 +13,7 @@ class Solution(object):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-        left, right = i + 1, n - 1  # Pointers for the other two numbers
+        left, right = i + 1, number - 1  # Pointers for the other two numbers
 
         while left < right:
             total = nums[i] + nums[left] + nums[right]
