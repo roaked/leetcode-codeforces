@@ -13,29 +13,29 @@ class Solution(object):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-        left, right = i + 1, number - 1  # Pointers for the other two numbers
+            left, right = i + 1, number - 1  # Pointers for the other two numbers
 
-        while left < right:
-            total = nums[i] + nums[left] + nums[right]
+            while left < right:
+                total = nums[i] + nums[left] + nums[right]
 
-            if total < 0:
-                left += 1
-            elif total > 0:
-                right -= 1
-            else:
-                result.append([nums[i], nums[left], nums[right]])
-
-                # Skip duplicate values for the second number in the triplet
-                while left < right and nums[left] == nums[left + 1]:
+                if total < 0:
                     left += 1
-                # Skip duplicate values for the third number in the triplet
-                while left < right and nums[right] == nums[right - 1]:
+                elif total > 0:
+                    right -= 1
+                else:
+                    result.append([nums[i], nums[left], nums[right]])
+
+                    # Skip duplicate values for the second number in the triplet
+                    while left < right and nums[left] == nums[left + 1]:
+                        left += 1
+                    # Skip duplicate values for the third number in the triplet
+                    while left < right and nums[right] == nums[right - 1]:
+                        right -= 1
+
+                    left += 1
                     right -= 1
 
-                left += 1
-                right -= 1
-
-        return result
+        return result #
 
 nums = [-1,0,1,2,-1,-4]
 print(Solution().threeSum(nums))
