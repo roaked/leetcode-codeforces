@@ -26,10 +26,10 @@ class Solution(object):
                 else:
                     result.append([nums[i], nums[left], nums[right]])
 
-                    # Skip duplicate values for the second number in the triplet
+                    # skip duplicates for 2nd nº in triplet ### MAYBE
                     while left < right and nums[left] == nums[left + 1]:
                         left += 1
-                    # Skip duplicate values for the third number in the triplet
+                    # skip duplicates for 3rd nº in triplet ### MAYBE
                     while left < right and nums[right] == nums[right - 1]:
                         right -= 1
 
