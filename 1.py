@@ -25,16 +25,16 @@
 # 3 -> 15
 
 class Solution:
-    def twoSum(self, int[nums], target):
+    def twoSum(self, nums, target):
         num_idx = {}
-        for idx, num in enumerate(int[nums]):
+        for idx, num in enumerate(nums):
             diff = target - num
             if diff in num_idx:
                 return [num_idx[diff], idx]
             else:
                 num_idx[num] = idx
 
-num = [2,7,11,15]
+nums = [2,7,11,15]
 target = 9
 print(Solution().twoSum(nums, target))
 
