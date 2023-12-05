@@ -6,14 +6,16 @@
 class Solution(object):
     def threeSum(self, nums): # int[nums] type list       
         num_idx = {} 
-        target = 0 
-        for idx, num in enumerate(nums): # type list ---> Pos. 0 / 1
-            print(nums[idx])
-            if idx != nums[idx]:
-                
-                return [num_idx[num],idx]
-            else:
-                num_idx[num]
+        final = []
+        counter = []
+        while (len(counter) <= 3
+            for idx, num in enumerate(nums): # type list ---> Pos. 0 / 1
+                print(nums[idx])
+                if idx != nums[idx]:
+                    #return [num_idx[num],idx]
+                        return final[nums[idx]]
+                else:
+                    num_idx[num]
 
 nums = [-1,0,1,2,-1,-4]
 print(Solution().threeSum(nums))
