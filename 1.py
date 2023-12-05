@@ -27,12 +27,12 @@
 class Solution:
     def twoSum(self, nums, target):
         num_idx = {}
-        for idx, num in enumerate(nums):
-            diff = target - num
-            if diff in num_idx:
-                return [num_idx[diff], idx]
+        for idx, num in enumerate(nums):  #0,2
+            diff = target - num  #diff = 9 - 2 = 7
+            if diff in num_idx: # if 7 in dictionary
+                return [num_idx[diff], idx] # return (dictionary "7" : 0)
             else:
-                num_idx[num] = idx
+                num_idx[num] = idx # store { 2 : 0 }
 
 nums = [2,7,11,15]
 target = 9
