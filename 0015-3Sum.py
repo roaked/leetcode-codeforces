@@ -16,8 +16,8 @@ class Solution(object):
             left, right = i + 1, number - 1  # left, right = 1, 5;
             print(left, right)
 
-            while left < right:
-                total = nums[i] + nums[left] + nums[right]
+            while left < right: # go through all the list (POINTERS)    i-1 <- (i) -> i+1    !! POINTER LEFT MUST START i+1
+                total = nums[i] + nums[left] + nums[right] # total = -4 -1 + 0 = 
 
                 if total < 0:
                     left += 1
