@@ -4,24 +4,19 @@
 # Notice that the solution set must not contain duplicate triplets.
 
 class Solution(object):
-    def threeSum(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+    def threeSum(self, nums): # int[nums] type list       
+        counter = {}  
+        for idx1, num1 in enumerate(nums): # type list ---> Pos. 0 / 1
+            
 
+        else:
+            num_idx[num1]
 
-Input: nums = [-1,0,1,2,-1,-4]
-Output: [[-1,-1,2],[-1,0,1]]
+nums = [-1,0,1,2,-1,-4]
+print(Solution().threeSum(nums))
 
-print(Solution().threeSum(self,nums))
+nums = [0,1,1]
+print(Solution().threeSum(nums))
 
-Input: nums = [0,1,1]
-Output: []
-
-print(Solution().threeSum(self,nums))
-
-Input: nums = [0,0,0]
-Output: [[0,0,0]]
-
-print(Solution().threeSum(self,nums))
+nums = [0,0,0]
+print(Solution().threeSum(nums))
