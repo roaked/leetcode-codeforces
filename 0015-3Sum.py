@@ -10,8 +10,7 @@ class Solution(object):
         counter = []
         while (len(counter) <= 3):
             for idx, num in enumerate(nums): # type list ---> Pos. 0 / 1
-                print(nums[idx])
-                if idx != nums[idx]:
+                if nums[idx]:
                     #return [num_idx[num],idx]
                     return final[nums[idx]]
                 else:
