@@ -9,11 +9,12 @@ class Solution(object):
         number = len(nums) # number = 6
         result = [] # empty list
         for i in range(number - 2): # 1 in range (4) --> this way we skip the last 2 because we always move in triplets
-        #check duplicates in first nº in triplet
+            #check duplicates in first nº in triplet
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-            left, right = i + 1, number - 1  # Pointers for the other two numbers
+            left, right = i + 1, number - 1  # left, right = 1, 5;
+            print(left, right)
 
             while left < right:
                 total = nums[i] + nums[left] + nums[right]
