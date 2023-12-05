@@ -8,12 +8,12 @@ class Solution(object):
         num_idx = {} 
         final = []
         counter = []
-        while (len(counter) <= 3
+        while (len(counter) <= 3):
             for idx, num in enumerate(nums): # type list ---> Pos. 0 / 1
                 print(nums[idx])
                 if idx != nums[idx]:
                     #return [num_idx[num],idx]
-                        return final[nums[idx]]
+                    return final[nums[idx]]
                 else:
                     num_idx[num]
 
