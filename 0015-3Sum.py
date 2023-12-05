@@ -5,11 +5,11 @@
 
 class Solution(object):
     def threeSum(self, nums): # int[nums]  LIST
-        nums.sort() # [-4, -1, -1, 0, 1, 2 ]
-        number = len(nums) # 
-        result = []
-        for i in range(number - 2):
-        #duplicates
+        nums.sort() # [-4, -1, -1, 0, 1, 2 ]  O(n log n)
+        number = len(nums) # number = 6
+        result = [] # empty list
+        for i in range(number - 2): # 
+        #check duplicates
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
