@@ -13,12 +13,12 @@ class Solution(object):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-            left, right = i + 1, number - 1  # left, right = 1, 5;
+            left, right = i + 1, number - 1  # left, right = 1, 5; RIGHT POINTER IS FIXED AT END OF LIST
             print(left, right)
 
-            while left < right: # go through all the list (POINTERS)    i-1 <- (i) -> i+1    !! POINTER LEFT MUST START i+1
-                total = nums[i] + nums[left] + nums[right] # total = -4 -1 + 0 = 
-
+            while left < right: # go through all the list (POINTERS)    i-1 <- (i) -> i+1    !! POINTER LEFT MUST START i+1 and then increase!! 
+                total = nums[i] + nums[left] + nums[right] # total = nums[0] + nums[1] + nums[5] = -4-1+2=-3; -4-1+2=-3; -4+0+2=-2; -4+1+2=-1
+                print(nums[i], nums[left], nums[right])
                 if total < 0:
                     left += 1
                 elif total > 0:
