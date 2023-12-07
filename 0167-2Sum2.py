@@ -5,7 +5,9 @@
 # Your solution must use only constant extra space.
 
 class Solution(object):
-    def twoSumTwo(self, numbers, target):
+    def twoSumTwo(self, nums, target):
+        nums.sort() # O(N log N)
+
 
 
 
