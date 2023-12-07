@@ -34,6 +34,8 @@ class Solution(object):
                     else:
                         r = mid - 1
 
+
+
 nums = [2,7,11,15]
 target = 9
 #Solution().twoSumD(nums, target)
