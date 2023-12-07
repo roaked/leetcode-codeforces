@@ -13,6 +13,7 @@ class Solution(object):
             if (num == nums[idx - 1]): # skip dupes
                 continue
             if diff in num_idx:
+                print('\nList Input {0}\nTarget is {1}\n Index 1 is {2} and Index 2 is {3}'.format(nums, target, num_idx[diff]+1, idx+1))
                 return [num_idx[diff], idx]
             else:
                 num_idx[num] = idx
@@ -21,12 +22,12 @@ class Solution(object):
 
 nums = [2,7,11,15]
 target = 9
-print(Solution().twoSumTwo(nums, target))
+Solution().twoSumTwo(nums, target)
 
 nums = [2,3,4]
 target = 6
-print(Solution().twoSumTwo(nums, target))
+Solution().twoSumTwo(nums, target)
 
 nums = [-1,0]
 target = -1
-print(Solution().twoSumTwo(nums, target))
+Solution().twoSumTwo(nums, target)
