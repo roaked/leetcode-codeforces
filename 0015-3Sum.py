@@ -5,7 +5,7 @@
     #
 class Solution(object):
     def threeSum(self, nums): # int[nums]  LIST
-        nums.sort() # [-4, -1, -1, 0, 1, 2 ]  O(n log n)
+        nums.sort() # [-4, -1, -1, 0, 1, 2 ]  O(n log n) Avoiding duplicates
         number = len(nums) # number = 6
         result = [] # empty list
         for i in range(number - 2): # 1 in range (4) --> this way we skip the last 2 because we always move in triplets
