@@ -6,7 +6,7 @@
 # Your solution must use only constant extra space.
 
 class Solution(object):
-    def twoSumTwo(self, nums, target):
+    def twoSum(self, nums, target):
         num_idx = {}
         for idx, num in enumerate(nums):
             diff = target - num
@@ -20,12 +20,12 @@ class Solution(object):
 
 nums = [2,7,11,15]
 target = 9
-Solution().twoSumTwo(nums, target)
+Solution().twoSum(nums, target)
 
 nums = [2,3,4]
 target = 6
-Solution().twoSumTwo(nums, target)
+Solution().twoSum(nums, target)
 
 nums = [-1,0]
 target = -1
-Solution().twoSumTwo(nums, target)
+Solution().twoSum(nums, target)
