@@ -14,11 +14,9 @@ class Solution(object):
                 continue
             if diff in num_idx:
                 print('\nInput: {0}\nTarget: {1}\nIndex 1: {2}\nIndex 2: {3}'.format(nums, target, num_idx[diff]+1, idx+1))
-                return [num_idx[diff], idx]
+                return [num_idx[diff]+1, idx+1]
             else:
                 num_idx[num] = idx
-        return -1
-
 
 nums = [2,7,11,15]
 target = 9
