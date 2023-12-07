@@ -17,7 +17,7 @@ class Solution(object):
             else:
                 num_idx[num] = idx
 
-#Binary Search (already sorted list)
+#Binary Search (already sorted list) -
     def twoSumBS(self, nums, target):
         investigatedSoFar = []
         for i in range(len(nums)):
