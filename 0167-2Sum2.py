@@ -5,15 +5,14 @@
 # The tests are generated such that there is exactly one solution. You may not use the same element twice.
 # Your solution must use only constant extra space.
 
+#Dictionary
 class Solution(object):
     def twoSum(self, nums, target):
         num_idx = {}
         for idx, num in enumerate(nums):
             diff = target - num
-            if (num == nums[idx - 1]): # skip dupes
-                continue
             if diff in num_idx:
-                print('\nInput: {0}\nTarget: {1}\nIndex 1: {2}\nIndex 2: {3}'.format(nums, target, num_idx[diff]+1, idx+1))
+                #print('\nInput: {0}\nTarget: {1}\nIndex 1: {2}\nIndex 2: {3}'.format(nums, target, num_idx[diff]+1, idx+1))
                 return [num_idx[diff]+1, idx+1]
             else:
                 num_idx[num] = idx
