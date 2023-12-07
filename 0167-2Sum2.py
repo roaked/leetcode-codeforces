@@ -13,7 +13,7 @@ class Solution(object):
             if (num == nums[idx - 1]): # skip dupes
                 continue
             if diff in num_idx:
-                print('\nList Input {0}\nTarget is {1}\n Index 1 is {2} and Index 2 is {3}'.format(nums, target, num_idx[diff]+1, idx+1))
+                print('\nInput: {0}\nTarget: {1}\nIndex 1: {2}\nIndex 2: {3}'.format(nums, target, num_idx[diff]+1, idx+1))
                 return [num_idx[diff], idx]
             else:
                 num_idx[num] = idx
