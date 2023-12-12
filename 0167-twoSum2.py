@@ -7,7 +7,7 @@
 
 #Dictionary
 class Solution(object):
-    def twoSumD(self, nums, target):
+    def twoSumD(self, nums: list, target: int):
         num_idx = {}
         for idx, num in enumerate(nums):
             diff = target - num
