@@ -11,11 +11,11 @@ class Solution(object):
     def reverseList(self, head: ListNode) -> ListNode:
         prev = None #null
         current = head #12345
-        while current: #loop until empty LL
-            next = current.next 
-            current.next = prev
-            prev = current
-            current = next
+        while current: #loop until null
+            next = current.next # save temp value
+            current.next = prev # update next pointer 1 -> Null
+            prev = current #prev moves to current
+            current = next #current moves to next
         return prev
 
 
