@@ -9,14 +9,14 @@ class ListNode:
 
 class Solution(object):
     def reverseList(self, head: ListNode) -> ListNode:
-        dummy = None #null
+        prev = None #null
         current = head #12345
         while current: #loop until empty LL
             next = current.next 
-            current.next = dummy
-            dummy = current
+            current.next = prev
+            prev = current
             current = next
-        return dummy
+        return prev
 
 
 head = ListNode(1, ListNode(2))
