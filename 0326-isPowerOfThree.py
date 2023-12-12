@@ -11,6 +11,9 @@ class Solution:
 n = 45
 print(Solution().isPowerOfThree(n))
 
+n = 1000
+print(Solution().isPowerOfThree(n))
+
 n = 27
 print(Solution().isPowerOfThree(n))
 
