@@ -4,7 +4,7 @@
 # Beats 95.61% on Runtime / 74.56% on Memory
 
 class Solution(object):
-    def findSpecialInteger(self, arr):
+    def findSpecialInteger(self, arr: list):
         threshold = len(arr) // 4
         counter = 1
         for i in range(len(arr) - 1):
