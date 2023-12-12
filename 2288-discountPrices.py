@@ -16,11 +16,12 @@ class Solution(object):
     def discountPrices(self, sentence: str, discount: int) -> str:
         words = sentence.split() # words in a list
         discounted_value = 1- (discount / 100) # discounted value
+        print(words)
 
         for i, word in enumerate(words):
             if word.startswith("$") and word[1:].isdigit():
                 num = int(word[1:]) * discounted_value
-                words[i] = "$" + "{:.2f}".format(num)
+                words[i] = "$" + "{:.2f}".format(num) # $ + .2float decimals 
 
         return " ".join(words)   
     
