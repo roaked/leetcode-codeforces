@@ -4,7 +4,7 @@
 # Notice that the solution set must not contain duplicate triplets.
     #
 class Solution(object):
-    def threeSum(self, nums): # int[nums]  LIST
+    def threeSum(self, nums: list): # int[nums]  LIST
         nums.sort() # [-4, -1, -1, 0, 1, 2 ]  O(n log n) Avoiding duplicates
         number = len(nums) # number = 6
         result = [] # empty list
