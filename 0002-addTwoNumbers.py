@@ -28,10 +28,7 @@ class Solution:
             
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
-
-        res = dummy.next
-        dummy.next = None
-        return res
+        return dummy.next
         
 l1 = ListNode(2, ListNode(4, ListNode(3)))
 l2 = ListNode(5, ListNode(6, ListNode(4)))
@@ -53,8 +50,8 @@ while sol:
 
 print("\n")
 
-l1 = ListNode(9,ListNode(9,ListNode(9,ListNode(9,ListNode(9,ListNode(9,ListNode(9)))))))
-l2 = ListNode(9,ListNode(9,ListNode(9,ListNode(9,ListNode))))
+l1 = ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))))
+l2 = ListNode(9, ListNode(9, ListNode(9, ListNode(9, None))))
 sol = Solution().addTwoNumbers(l1, l2)
 while sol:
     print(sol.val, end=" ")
