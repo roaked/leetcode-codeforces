@@ -12,6 +12,8 @@ Return a string representing the modified sentence.
 Note that all prices will contain at most 10 digits.
 """
 
+# Beats 90.48% on Runtime / 68.83% on Memory
+
 class Solution(object):
     def discountPrices(self, sentence: str, discount: int) -> str:
         words = sentence.split() # words in a list
@@ -20,9 +22,10 @@ class Solution(object):
 
         for i, word in enumerate(words):
             if word.startswith("$") and word[1:].isdigit():
+                print(word[1:])
                 num = int(word[1:]) * discounted_value
+                print(num)
                 words[i] = "$" + "{:.2f}".format(num) # $ + .2float decimals 
-
         return " ".join(words)   
     
 sentence = "there are $1 $2 and 5$ candies in the shop"
