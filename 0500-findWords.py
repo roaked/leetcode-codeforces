@@ -32,3 +32,7 @@ print("\n")
 words = ["adsdf","sfd"]
 print(Solution().findWords(words))
 print("\n")
+
+words = ["ads1321df","sfd"]
+print(Solution().findWords(words))
+print("\n")
