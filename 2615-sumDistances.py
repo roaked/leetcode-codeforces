@@ -11,11 +11,13 @@ class Solution:
         nums.sort()
         print(nums_initial)
         def dfs(combination, current_sum, idx):
-            if len(combination) == 0:
-                sol.append(idx)
-            for i in range(idx, SIZE):
+            print(len(combination))
+            if sol.isEmpty():
+                sol.append(nums[i])
+            print(sol)
+            for i in range(idx, SIZE):       
                 dfs(combination + [nums[idx]], current_sum + abs(idx - i), i)
-                
+                #0
         dfs([],0,0)
 
         return sol
