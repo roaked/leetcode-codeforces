@@ -23,5 +23,8 @@ class Solution: # height balanced BST
         return root
 
 sol = Solution().sortedArrayToBST(nums = [-10,-3,0,5,9])
+sol2 = Solution().sortedArrayToBST(nums = [1,3])
 
 printTree(sol)
+print('\n')
+printTree(sol2)
