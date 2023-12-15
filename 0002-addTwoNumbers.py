@@ -19,7 +19,7 @@ class Solution:
             v1 = l1.val if l1 else 0
             v2 = l2.val if l2 else 0
             sum = v1 + v2 + remain
-            value = sum % 10  # 9 mod 10 = 1 
+            value = sum % 10  # 9 mod 10 = 9
             remain = sum // 10 # 9 floor 10 = 0
 
             newNode = ListNode(value)
