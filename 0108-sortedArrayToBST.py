@@ -1,6 +1,7 @@
 """Given an integer array nums where the elements are sorted in ascending order, convert it to a 
 height-balanced binary search tree."""
 
+import printTree from 
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -8,20 +9,19 @@ class TreeNode:
         self.left = left
         self.right = right
 
-class Solution: # height balanced
+class Solution: # height balanced BST
     def sortedArrayToBST(self, nums: list[int]) -> TreeNode:    
-        if not root:
-            return 0
 
-        root = TreeNode(3)
-        root.left = TreeNode(9)
-        root.right = TreeNode(20)
-        root.right.left = TreeNode(15)
-        root.right.right = TreeNode(7)
+        if len(nums) == 0: 
+            return None
+        
+        rootNode = len(nums)//2
+        root = TreeNode(nums[rootNode])
+        root.left = self.sortedArrayToBST(nums[:rootNode]) # until root node
+        root.right = self.sortedArrayToBST(nums[rootNode+1:]) # after root node
 
+        return root
 
-        return TreeNode
+sol = Solution().sortedArrayToBST(nums = [-10,-3,0,5,9])
 
-nums = [-10,-3,0,5,9]
-nums = [-10,-3,0,5,9]
-nums = [1,3]
+printTree(sol)
