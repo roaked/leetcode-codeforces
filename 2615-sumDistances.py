@@ -4,25 +4,28 @@
 
 Return the array arr.
 """
+from collections import defaultdict
 
 class Solution:
     def sumDistances(self, nums: list[int]) -> list[int]:
-        sol, dfs_sol, SIZE = [], [], len(nums)
-        nums_initial = nums.copy()
-        nums.sort()
-        print(nums_initial)
-        def dfs(combination, current_sum, idx):
-            print(len(combination))
-            if sol.isEmpty():
-                sol.append(nums[i])
-            print(sol)
-            for i in range(idx, SIZE):       
-                dfs(combination + [nums[idx]], current_sum + abs(idx - i), i)
-                #0
-        dfs([],0,0)
-
-        return sol
-    
+        size = len(nums)
+        arr = [0] * size
+        
+        sums = defaultdict(int)
+        counts = defaultdict(int)
+        
+        for i, x in enumerate(nums):
+            arr[i] = i * counts[x] - sums[x]
+            sums[x] += i
+            counts[x] += 1
+            
+        sums = defaultdict(int)
+        counts = defaultdict(int)
+        for i, x in enumerate(reversed(nums)):
+            arr[size - i - 1] += i * counts[x] - sums[x]
+            sums[x] += i
+            counts[x] += 1
+        return arr
 
 print(Solution().sumDistances(nums=[1,3,5,1,2]))
 
