@@ -12,6 +12,10 @@ class Solution:
         
         return index
 
+    def removeDuplicatesSet(self, nums: list[int]) -> int:
+        nums[:] = sorted(set(nums)) 
+        return len(nums)
+
 sol = Solution()
 print(sol.removeDuplicates(nums=[1, 1, 2])) 
 print(sol.removeDuplicates(nums=[0, 0, 1, 1, 1, 2, 2, 3, 3, 4])) 
