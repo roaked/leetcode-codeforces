@@ -37,7 +37,7 @@ class Solution:
                 else:
                     right = mid - 1
         
-        return -1 
+        return -1 #no case
     
 print(Solution().search(nums = [4,5,6,7,0,1,2], target = 0)) #4
 print('\n')
