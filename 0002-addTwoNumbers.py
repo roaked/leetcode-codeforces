@@ -12,7 +12,7 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode):
-        dummy = cur = ListNode() # creating and pointer
+        dummy = cur = ListNode() # creating dummy node and pointer
         print(ListNode())
         remain = 0
         while l1 or l2 or remain: # not empty
