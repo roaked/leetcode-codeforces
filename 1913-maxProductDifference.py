@@ -5,18 +5,11 @@ Given an integer array nums, choose four distinct indices w, x, y, and z such th
 
 Return the maximum such product difference."""
 
-
 class Solution:
     def maxProductDifference(self, nums: list[int]) -> int:
-        size = len(nums)
-        numsOriginal = nums.copy()
         nums.sort()
-        # product = (a*b) - (c*d)
-        while nums:
-            print(nums[size-1]* nums[size-2] - nums[0] * nums[1])
-            return nums[size-1]* nums[size-2] - nums[0] * nums[1]
+        return nums[len(nums)-1]* nums[len(nums)-2] - nums[0] * nums[1]
 
-        return 0
     
 print(Solution().maxProductDifference(nums = [5,6,2,7,4]))      
 print('\n')
