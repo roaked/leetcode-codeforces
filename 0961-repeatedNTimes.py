@@ -1,7 +1,7 @@
 """You are given an integer array nums with the following properties:
 
 - nums.length == 2 * n.
--nums contains n + 1 unique elements.
+- nums contains n + 1 unique elements.
 - Exactly one element of nums is repeated n times.
 Return the element that is repeated n times."""
 
@@ -14,9 +14,10 @@ class Solution:
         for _ in range(size):
             if cnt == n:
                 return nums[_]       
+            elif nums[_+1] == nums[_]:
+                cnt += 1
             else: 
-                cnt += 1 if nums[_+1] == nums[_] else cnt == 1
-
+                cnt = 1
     
 print(Solution().repeatedNTimes(nums = [1,2,3,3]))
 print('\n')
