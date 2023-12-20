@@ -5,11 +5,11 @@ If one or more of the surrounding cells of a cell is not present,
  we do not consider it in the average (i.e., the average of the four cells in the red smoother)."""
 
 class Solution:
-    def imageSmoother(matrix):
-        if not matrix:
+    def imageSmoother(self, img):
+        if not img:
             return []
 
-        m, n = len(matrix), len(matrix[0])
+        m, n = len(img), len(img[0])
         result = [[0] * n for _ in range(m)]
 
         for i in range(m):
@@ -18,8 +18,8 @@ class Solution:
                 count = 0
 
                 for r in range(max(0, i - 1), min(m, i + 2)):
-                    for c in range(max(0, j - 1), min(n, j + 2)):
-                        total += matrix[r][c]
+                    for c in range(max(0, j - 1), min(n, j + 2)): 
+                        total += img[r][c]
                         count += 1
 
                 result[i][j] = total // count
