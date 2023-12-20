@@ -8,7 +8,6 @@ Return the minimum possible sum of new1 and new2."""
 class Solution:
     def minimumSum(self, num: int) -> int:
         digits_list = sorted(str(num))
-        concatenate1, concatenate2 = str(digits_list[0]) + str(digits_list[3]), str(digits_list[1]) + str(digits_list[2])
-        return int(concatenate1) + int(concatenate2)
+        return int(digits_list[0] + digits_list[2]) + int(digits_list[1] + digits_list[3])
     
 print(Solution().minimumSum(num = 2932))
