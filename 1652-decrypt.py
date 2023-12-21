@@ -11,9 +11,21 @@ Given the circular array code and an integer key k, return the decrypted code to
 
 
 class Solution:
-    def decrypt(self, code: list[int], k: int) -> list[int]:
+    def decrypt(code, k):
+        if k == 0:
+            return [0] * len(code)
         
-    return 
+        n = len(code)
+        result = []
+        
+        for i in range(n):
+            total = 0
+            for j in range(1, abs(k) + 1):
+                idx = (i + j) % n if k > 0 else (i - j) % n
+                total += code[idx]
+            result.append(total)
+        
+        return result
 
 print(Solution().decrypt(code = [5,7,1,4], k = 3))
 
