@@ -11,7 +11,7 @@ Given the circular array code and an integer key k, return the decrypted code to
 
 
 class Solution:
-    def decrypt(code, k):
+    def decrypt(self, code, k):
         if k == 0:
             return [0] * len(code)
         
