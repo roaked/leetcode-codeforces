@@ -15,7 +15,6 @@ class Solution:
         return nums[-1]
     
     def singleNumberXOR(self, nums: list[int]) -> int:
-         # Initialize counters for bits
         ones = 0
         twos = 0
 
