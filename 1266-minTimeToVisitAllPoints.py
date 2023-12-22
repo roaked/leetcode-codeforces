@@ -12,9 +12,12 @@ You are allowed to pass through points that appear later in the order, but these
 
 class Solution(object):
     def minTimeToVisitAllPoints(self, point: list[list[int]]) -> int:
-        while point:
-            a = 1
-        return 0
+        time = 0
+        for i in range(len(point) - 1):
+            x_diff = abs(point[i][0] - point[i + 1][0])
+            y_diff = abs(point[i][1] - point[i + 1][1])
+            time += max(x_diff, y_diff)
+        return time
     
 print(Solution().minTimeToVisitAllPoints(point = [[1,1],[3,4],[-1,0]]))
 print('\n')    
