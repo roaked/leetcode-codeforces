@@ -11,7 +11,7 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def minDepth(self, root: TreeNode) -> int:
+    def minDepthBF(self, root: TreeNode) -> int:
         if not root:
             return 0
 
@@ -28,6 +28,23 @@ class Solution:
             return 1 + leftDepth        
         
         return min(leftDepth, rightDepth) + 1
+    
+    def minDepth(self, root: TreeNode) -> int:
+        
+        self.min_Depth = float('inf')
+        self.dfs(root, 0)
+        return self.min_Depth
+    
+    def dfs(self, node, cur_depth):
+        if not node: #exit dfs recursion
+            return
+        
+        if not node.left and not node.right:
+            self.min_Depth = min(self.min_Depth, cur_depth + 1)
+        
+        self.dfs(node.left, cur_depth +1)
+        self.dfs(node.right, cur_depth +1)
+
     
 root = TreeNode(3)
 root.left = TreeNode(9)
