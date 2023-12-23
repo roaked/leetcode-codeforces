@@ -2,10 +2,9 @@
 
 This is a small sample of my interest for Data Structures and Algorithms (DSA) problems on LeetCode. 
 
-{{< hint warning >}}
-While I may not consider myself an expert, I'm passionate about problem-solving and enjoy exploring these challenges purely for the joy of it..{{< /hint >}}
+While I may not consider myself an expert, I'm passionate about problem-solving and enjoy exploring these challenges purely for the joy of it...
 
-## **GitHub Repo**
+## GitHub Repo
 
 Explore my solutions, implementations, and additional resources.
 
