@@ -7,8 +7,10 @@ Return true if the path crosses itself at any point, that is, if at any time you
 class Solution:
     def isPathCrossing(self, path: str) -> bool:
 
-        visited = {(0, 0): True}
+        visited = set()
         xc, yc = 0, 0
+        visited.add((xc, yc))
+
         for direction in path:
             if direction == 'N':
                 yc += 1
@@ -22,7 +24,7 @@ class Solution:
             if (xc, yc) in visited:
                 return True
 
-            visited[(xc, yc)] = True
+            visited.add((xc, yc))
 
         return False
     
