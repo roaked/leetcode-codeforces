@@ -4,15 +4,12 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         ans = str(x)
-        n = len(ans)-1
         
         while x>=0:
-            for i in range(n):
-                print(i, n-i)
-                if ans[i] != ans[n-i]:
+            for i in range(len(ans)-1):
+                if ans[i] != ans[len(ans)-1-i]:
                     return False
-            return True
-        
+            return True       
         return False #negatives
 
 print(Solution().isPalindrome(x = 121)) #t
