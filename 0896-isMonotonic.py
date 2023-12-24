@@ -7,4 +7,17 @@ Given an integer array nums, return true if the given array is monotonic, or fal
 
 class Solution:
     def isMonotonic(self, nums: list[int]) -> bool:
-        
+
+        if nums[-1] > nums[0]: #increasing
+            for i in range(len(nums)-1):
+                if nums[i] > nums[i+1]:
+                    return False
+        else:
+            for i in range(len(nums)-1):
+                if nums[i] < nums[i+1]:
+                    return False
+        return True
+    
+print(Solution().isMonotonic(nums = [1,2,2,3]))
+print(Solution().isMonotonic(nums = [6,5,4,4]))
+print(Solution().isMonotonic(nums = [1,3,2]))
