@@ -21,7 +21,7 @@ class Solution:
             else:
                 l = mid + 1
         
-        return l
+        return r
     
 print(Solution().findPeakElement(nums = [1,2,3,1]))
 print('\n')
