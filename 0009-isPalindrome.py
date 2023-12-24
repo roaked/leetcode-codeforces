@@ -4,7 +4,6 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         ans = str(x)
-        
         while x>=0:
             for i in range(len(ans)-1):
                 if ans[i] != ans[len(ans)-1-i]:
