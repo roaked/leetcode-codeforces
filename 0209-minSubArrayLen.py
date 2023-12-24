@@ -9,30 +9,28 @@ class Solution:
         if not nums: 
             return 0
         
-        left, curr_sum, ans = 0, 0, float('inf')
+        left, curr_sum, ans, found = 0, 0, float('inf'), False
         
-        def dfs(start, curr_sum):
-            if curr_sum >= target:
-                ans = min(ans, start - left)    
-                return
-            if start == len(nums):
-                return
+        # def dfs(start, curr_sum):
+        #     if curr_sum >= target:
+        #         ans = min(ans, start - left)    
+        #         return
+        #     if start == len(nums):
+        #         return
             
-            dfs(start + 1, curr_sum + nums[start])
+        #     dfs(start + 1, curr_sum + nums[start])
         
         for right in range(len(nums)):
             curr_sum += nums[right]
             
             while curr_sum >= target:
+                found = True
                 ans = min(ans, right - left + 1)
                 curr_sum -= nums[left]
                 left += 1
-        
-        if ans != float('inf'):
-            return ans
-        
-        dfs(0, 0)
-        return ans if ans != float('inf') else 0
+                
+        #dfs(0, 0)
+        return ans if found else 0
 
         
     
