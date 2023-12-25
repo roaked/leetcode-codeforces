@@ -16,10 +16,7 @@ class Solution:
             row.append(1) #last element in row
             ans.append(row)
        
-        return ans[rowIndex]
-
-
-        
+        return ans[rowIndex]        
 
 print(Solution().getRow(rowIndex = 3))
 print(Solution().getRow(rowIndex = 0))
