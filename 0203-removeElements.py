@@ -10,7 +10,7 @@ class ListNode:
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
 
-        dummy = ListNode(-1)
+        dummy = ListNode(-1) #dummy placeholder at beginning
         dummy.next = head
 
         current = dummy
