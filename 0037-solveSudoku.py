@@ -9,12 +9,33 @@ Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of
 The '.' character indicates empty cells.
 """
 
-class Solution:
-    def solveSudoku(self, board: list[list[str]]) -> None:
-        """
-        Do not return anything, modify board in-place instead.
-        """
+from itertools import product
+from 0036-isValidSudoku import isValidSudoku
 
+
+class Solution:
+
+    def emptyLocation(self, board: list[list[int]]):
+        for i in range(9):
+            for j in range(9):
+                if board[i][j] == 0:
+                    return i, j
+        return -1, -1
+
+    def solveSudoku(self, board: list[list[int]]):
+        row, col = emptyLocation(board)
+        
+        if row == -1 and col == -1:
+            return True
+        
+        for num in range(1, 10):
+            if isValidSudoku(board):
+                board[row][col] = num
+                if solveSudoku(board):
+                    return True
+                board[row][col] = 0
+        
+        return False
 
 board = [["5","3",".",".","7",".",".",".","."],
          ["6",".",".","1","9","5",".",".","."],
