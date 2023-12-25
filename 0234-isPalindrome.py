@@ -10,13 +10,13 @@ class ListNode:
 
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        slow = fast = head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
+        slow = fast = head #pointers to head
+        while fast and fast.next: #this way we find the middle pointer
+            slow = slow.next #one node (middle)
+            fast = fast.next.next #two nodes
         
         prev = None
-        while slow:
+        while slow: #one node
             next_node = slow.next
             slow.next = prev
             prev = slow
