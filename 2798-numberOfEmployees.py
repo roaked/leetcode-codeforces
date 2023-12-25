@@ -19,27 +19,3 @@ class Solution:
 print(Solution().numberOfEmployeesWhoMetTarget(hours = [0,1,2,3,4], target = 2))
 
 print(Solution().numberOfEmployeesWhoMetTarget(hours = [5,1,4,2,2], target = 6))
-
-
-
-
-
-
-
-
-
-        ans = 0
-        temp = None
-        for i in range(len(nums)):
-            temp = nums[i]
-            if(nums[i]>9):
-                while(temp > 9):
-                    rest = temp % 10
-                    temp = temp // 10
-                    ans+= rest
-                ans += temp
-            else:
-                ans += nums[i]
-            
-
-        return abs(sum(nums) - ans)
