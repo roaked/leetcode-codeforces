@@ -15,7 +15,6 @@ class Solution:
             if hours[i] >= target:
                 cnt += 1
         return cnt
-        
 
 print(Solution().numberOfEmployeesWhoMetTarget(hours = [0,1,2,3,4], target = 2))
 
