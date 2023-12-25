@@ -12,7 +12,7 @@ class Solution:
 
         dummy = ListNode(-1) #dummy placeholder at beginning
         dummy.next = head
-
+    
         current = dummy
         while current.next:
             if current.next.val == val:
