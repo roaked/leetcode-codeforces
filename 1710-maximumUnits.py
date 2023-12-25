@@ -11,7 +11,8 @@ Return the maximum total number of units that can be put on the truck."""
 from typing import List
 class Solution:
     def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
-        boxTypes.sort(key=lambda x: x[1], reverse=True)
+        boxTypes.sort(key=lambda x: x[1], reverse=True) #sorting by columns number
+        #print(boxTypes)
 
         total_units = 0
         for boxes, units_per_box in boxTypes:
