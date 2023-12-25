@@ -8,13 +8,7 @@ from typing import List
 
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
-        richest = 0
-        for idx in range(len(accounts)):
-            richest = max(sum(accounts[idx]),richest)
-            
-        return richest
-
-
+        return max(sum(account) for account in accounts)
 
 print(Solution().maximumWealth(accounts = [[1,2,3],[3,2,1]]))
 print(Solution().maximumWealth(accounts = [[1,5],[7,3],[3,5]]))
