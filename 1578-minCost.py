@@ -4,6 +4,7 @@ Alice wants the rope to be colorful. She does not want two consecutive balloons 
 
 Return the minimum time Bob needs to make the rope colorful."""
 
+
 from typing import List
 
 class Solution:
