@@ -7,12 +7,12 @@ from typing import List
 
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
-        counter = Counter(nums)
-        unique_sum = 0
-        for num, count in counter.items():
-            if count == 1:  # Unique element
-                unique_sum += num
-        return unique_sum
+        nums = Counter(nums)
+        sums = 0
+        for key in nums:
+            if nums[key] == 1:
+                sums += key
+        return sums
     
 print(Solution().sumOfUnique(nums = [1,2,3,2]))
 print(Solution().sumOfUnique(nums = [1,1,1,1,1]))
