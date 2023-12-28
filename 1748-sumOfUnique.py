@@ -2,14 +2,17 @@
 
 Return the sum of all the unique elements of nums."""
 
-from typing import List
 from collections import Counter
+from typing import List
 
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
-        dic = Counter(nums)
-        filtered_dict = {key: value for key, value in dic.items() if value == 1}
-        return sum(filtered_dict)
+        counter = Counter(nums)
+        unique_sum = 0
+        for num, count in counter.items():
+            if count == 1:  # Unique element
+                unique_sum += num
+        return unique_sum
     
 print(Solution().sumOfUnique(nums = [1,2,3,2]))
 print(Solution().sumOfUnique(nums = [1,1,1,1,1]))
