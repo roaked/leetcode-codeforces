@@ -5,6 +5,7 @@ A string s is lexicographically sorted if for all valid i, s[i] is the same as o
 class Solution(object):
     def countVowelStrings(self, n: int) -> int:
 
+
         if n == 0:
             return 1
         

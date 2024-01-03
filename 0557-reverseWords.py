@@ -14,5 +14,6 @@ class Solution:
                 l += 1
             reversed_words.append(''.join(word_list))
         return ' '.join(reversed_words) 
+    
 
 print(Solution().reverseWords(s = "Let's take LeetCode contest"))
