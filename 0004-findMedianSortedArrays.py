@@ -2,10 +2,10 @@
 
 The overall run time complexity should be O(log (m+n))."""
 
-
+from typing import List
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        m, n, t = size(nums1), size(num2), size(nums1) + size(nums2)
+        m, n, t = len(nums1), len(num2), len(nums1) + len(nums2)
         l, r = 0, t
         merged_array = [0] * t # size of ans
         mid = l + (r - l) //2
