@@ -4,6 +4,9 @@ A string s is lexicographically sorted if for all valid i, s[i] is the same as o
 
 class Solution:
     def countVowelStrings(self, n: int) -> int:
+
+        if n == 0:
+            return 1
         
         dp = [[0] * 5 for _ in range(n + 1)]
 
@@ -18,9 +21,9 @@ class Solution:
         for row in dp:
             print(row)
 
-        return sum(dp[n])
+        return sum(dp[n]) 
 
 # print(Solution().countVowelStrings(n = 1))
 # print(Solution().countVowelStrings(n = 2))
-print(Solution().countVowelStrings(n = 6))
+print(Solution().countVowelStrings(n = 0))
 # print(Solution().countVowelStrings(n = 33))
