@@ -4,7 +4,7 @@ A string s is lexicographically sorted if for all valid i, s[i] is the same as o
 
 
 class Solution:
-    def countVowelStrings(self, n: int, combinations: list[int]) -> int:
+    def countVowelStrings(self, n: int) -> int:
         
         dp = [[0] * 5 for _ in range(n + 1)]
         
@@ -17,3 +17,7 @@ class Solution:
         
         return sum(dp[n])
 
+print(Solution().countVowelStrings(n = 1))
+print(Solution().countVowelStrings(n = 2))
+print(Solution().countVowelStrings(n = 3))
+print(Solution().countVowelStrings(n = 33))
