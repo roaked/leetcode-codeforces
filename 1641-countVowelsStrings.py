@@ -7,7 +7,7 @@ class Solution:
         
         dp = [[0] * 5 for _ in range(n + 1)]
 
-        for i in range(5): #base case
+        for i in range(5): #base case 'a','e','i','o','u' ending
             dp[1][i] = 1
         #print(dp)
 
