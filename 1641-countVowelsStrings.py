@@ -2,7 +2,7 @@
 
 A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.  """
 
-class Solution:
+class Solution(object):
     def countVowelStrings(self, n: int) -> int:
 
         if n == 0:
@@ -22,8 +22,20 @@ class Solution:
             print(row)
 
         return sum(dp[n]) 
+    
+    def countBacktracking(self, n, last=''):
+
+        if n == 0:
+            return 1
+        else:
+            nums = 0
+            for vowel in ['a', 'e', 'i', 'o', 'u']:
+                if last <= vowel:
+                    nums += Solution().countBacktracking(n-1, vowel)
+            return nums
 
 # print(Solution().countVowelStrings(n = 1))
 # print(Solution().countVowelStrings(n = 2))
-print(Solution().countVowelStrings(n = 0))
+print(Solution().countVowelStrings(n = 6), '\n') 
+print(Solution().countBacktracking(n = 6))
 # print(Solution().countVowelStrings(n = 33))
