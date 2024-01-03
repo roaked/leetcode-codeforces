@@ -22,5 +22,5 @@ class Solution:
 
 # print(Solution().countVowelStrings(n = 1))
 # print(Solution().countVowelStrings(n = 2))
-print(Solution().countVowelStrings(n = 5))
+print(Solution().countVowelStrings(n = 6))
 # print(Solution().countVowelStrings(n = 33))
