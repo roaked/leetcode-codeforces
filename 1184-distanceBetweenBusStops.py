@@ -13,3 +13,4 @@ class Solution:
             min(sum(distance[destination:start]), sum(distance[:destination]) + sum(distance[start:]))
 
 print(Solution().distanceBetweenBusStops(distance = [7,10,1,12,11,14,5,0], start = 7, destination = 2))
+print(Solution().distanceBetweenBusStops(distance = [7,10,1,12,11,14,5,0], start = 2, destination = 7))
