@@ -5,7 +5,8 @@ A lucky number is an element of the matrix such that it is the minimum element i
 from typing import List
 class Solution:
     def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
-        return [num for num in [min(row) for row in matrix] if num in [max(row) for row in zip(*matrix)]]
+        rows, cols = [min(row) for row in matrix], [max(row) for row in zip(*matrix)]
+        return [num for num in rows if num in cols]
 
 
 
