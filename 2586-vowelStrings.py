@@ -12,7 +12,7 @@ class Solution:
         ans = 0
 
         for word in range(left, right+1):
-            if words[word][0] in ['a', 'e', 'i', 'o', 'u'] and words[word][-1] in ['a', 'e', 'i', 'o', 'u']:
+            if words[word][0] in vowels and words[word][-1] in vowels:
                 ans+=1
         return ans
     
