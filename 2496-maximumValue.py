@@ -7,7 +7,7 @@ Given an array strs of alphanumeric strings, return the maximum value of any str
 from typing import List
 class Solution:
     def maximumValue(self, strs: List[str]) -> int:
-        ans, res = [], ''
+        ans = []
         for string in strs:
             if string.isdigit(): #only digit
                 ans.append(int(string))
