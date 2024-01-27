@@ -14,5 +14,4 @@ class Solution:
                     cnt += 1
         return cnt * 2
 
-
 print(Solution().countTriples(n = 5))
