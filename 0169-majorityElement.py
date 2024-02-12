@@ -9,10 +9,7 @@ from typing import List
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         d, l = Counter(nums), len(nums) // 2
-        for key, value in d.items():
-            if value > l:
-                return key
-        return None
+        return [key if value > l else None for key, value in d.items()]
 
 print(Solution().majorityElement(nums = [2,2,1,1,1,2,2]))
 
