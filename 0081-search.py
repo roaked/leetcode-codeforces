@@ -44,8 +44,6 @@ class Solution:
         return False
     
 print(Solution().search(nums = [2,5,6,0,0,1,2], target = 0))
-print('\n')
 print(Solution().search(nums = [2,5,6,0,0,1,2], target = 3))
-print('\n')
 print(Solution().search(nums = [1,0,1,1,1], target = 0))
 
